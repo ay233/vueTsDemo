@@ -2,6 +2,7 @@
   "name": "rvcontrol",
   "version": "0.1.0",
   "private": true,
+  "author":"ay12580233@163.com / ay12580233@gmail.com",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

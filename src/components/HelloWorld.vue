@@ -14,29 +14,29 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class HelloWorld extends Vue {
     @Prop() private msg!: string
-    @Prop() propC !: string 
+    @Prop() propC!: string
     msg1 = 'data数据'
     child = '111'
     someValue: any = "this is a string";
     mounted() {
-        this.greet();
+        this.greet(this.msg);
         this.$message({
             message: 'app 启动成功',
             type: 'success'
         })
     }
-    get computedMsg():string {
+    get computedMsg(): string {
         return '我是计算属性！！';
     }
     // 方法
-    greet() {
-        console.log('greeting: ' + this.msg)
+    greet(a: string): void {
+        console.log('greeting: ' + a)
     }
     @Watch('child')
     onChildChanged(val: string, oldVal: string) {
         console.log(val, oldVal, '监听数据变化')
     }
-    @Watch('$route')  
+    @Watch('$route')
     onChildChanged1(val: string, oldVal: string) {
         console.log(val, oldVal, '监听数据变化')
     }
