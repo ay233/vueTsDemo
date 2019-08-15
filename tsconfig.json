@@ -11,8 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "allowJs": true,
     "types": [
-      "webpack-env"
+      "webpack-env","fastclick"
     ],
     "paths": {
       "@/*": [
@@ -27,11 +28,13 @@
     ]
   },
   "include": [
+    "./src/**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "./index.d.ts"
   ],
   "exclude": [
     "node_modules"
