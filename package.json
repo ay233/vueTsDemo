@@ -1,7 +1,12 @@
 {
-  "name": "rvcontrol",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ay-color",
+  "version": "0.5.0",
+  "private": false,
+  "main": "dist/js/ay-color.js", 
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/ay233/vueTsDemo.git"
+  },
   "author":"ay12580233@163.com / ay12580233@gmail.com",
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -16,9 +16,9 @@ module.exports = {
     //输出文件目录
     outputDir: 'outputFile',
     //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
-    assetsDir:'static',
+    assetsDir: 'static',
     // use the full build with in-browser compiler? https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
-    //	compiler: false,
+    //    compiler: false,
     // eslint-loader 是否在保存的时候检查
     lintOnSave: false,
     // webpack配置 see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md 
@@ -47,7 +47,7 @@ module.exports = {
         }
     },
     // vue-loader 配置项 https://vue-loader.vuejs.org/en/options.html
-    //	vueLoader: {},  、、打开会报错
+    //    vueLoader: {},  、、打开会报错
     // 生产环境是否生成 sourceMap 文件
     productionSourceMap: true,
     // css相关配置
@@ -62,9 +62,9 @@ module.exports = {
         modules: false
     },
     // use thread-loader for babel & TS in production build  enabled by default if the machine has more than 1 cores
-    //	parallel: require('os').cpus().length > 1,
+    //    parallel: require('os').cpus().length > 1,
     // 是否启用dll See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#dll-mode
-    //	dll: false,
+    //    dll: false,
     // PWA 插件相关配置  see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
     // pwa: { //https://www. uis.cc/2018/02/27/New-features-of-vue-cli-3-speed/
     //     workboxPluginMode: 'InjectManifest',
@@ -107,4 +107,32 @@ module.exports = {
             // 插件可以作为 `options.pluginOptions.foo` 访问这些选项。
         }
     }
+}
+
+
+
+
+
+// 发布npm 配置
+module.exports = {
+    chainWebpack: (config) => { //设置路径别名
+        config.resolve.alias
+            .set('@', resolve('src'))
+            .set('assets', resolve('src/assets'))
+            .set('components', resolve('src/components'))
+            .set('views', resolve('src/views'))
+            .set('vue$', 'vue/dist/vue.esm.js')
+    },
+    configureWebpack: config => {
+        //配置发布插件相关
+        return {
+            entry: './src/index.js',
+            output: {
+                filename: 'js/ay-color.js',
+                library: 'ayColor',
+                libraryTarget: 'umd',
+                umdNamedDefine: true
+            }
+        }
+    },
 }

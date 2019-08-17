@@ -1,29 +1,38 @@
-# rvcontrol
+# ay-color
+一个简单的省区市滑动选择插件
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
+## 安装
+```JS
+yarn add ay-color
+or
+npm i ay-color --S
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
+## 使用
+```JS
+//ES6引入
+import colorsel from 'ay-color' 
+Vue.use(colorsel);
+//require引入
+var colorsel = require('colorsel_ay')
+Vue.use(colorsel)
+
+//组件中使用
+```html
+        <ay-color :colorArr=colorArr :show=show @getColor=getc></ay-color>
 ```
 
-### Run your tests
-```
-yarn run test
-```
+### Props说明
 
-### Lints and fixes files
-```
-yarn run lint
-```
+|    参数    |    作用   |   类型   | 默认值 |
+| -----------------  | ---------------- | :--------: | :----------: |
+| colorArr        | 定义的颜色数组
+| show       | 展示与隐藏
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 事件
+
+| name | Description   |
+| :--------:   | -----  |
+|    getColor    |  获取选中的颜色
+
