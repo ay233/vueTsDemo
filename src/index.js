@@ -1,8 +1,10 @@
-import color from './components/color';  //引入组件
+import color from './components/color'; //引入组件
 const ayColor = {
-	// 详情查看https://cn.vuejs.org/v2/guide/plugins.html
-  install (Vue, options) {
-    Vue.component('ay-color', color);//全局组件
-  }
+    install(Vue, options) {
+        Vue.component('ay-color', color); 
+    }
+};
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(ayColor);
 }
-export default ayColor; //导出
+export default ayColor; 
