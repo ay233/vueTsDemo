@@ -1596,12 +1596,13 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
-ay-color@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/ay-color/-/ay-color-1.3.3.tgz#97ef2f9b2d66eb400b00aab24c1b47b44dfe63fe"
-  integrity sha512-DS1ypVbYEO40uo5hxlSltH/3h8TjELRZr+9Ns9Kl3D9uIb44G2O1pA5lhUbs+XsFjnZpfO7GpdSdBxnAeiyapA==
+ay-color@^1.3.3, ay-color@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/ay-color/-/ay-color-1.3.5.tgz#0b2f24898c28e1e3d99ece1c72e1475cd026e2a8"
+  integrity sha512-Kozt2G46Ima+EqalgfD8cMlrvZrNQ4MukHk2TvlDji3AjU5q8VD4FhMpQcdnVW4xPMexpRQfswWegZT8TSaGpA==
   dependencies:
     "@types/echarts" "^4.1.9"
+    ay-color "^1.3.3"
     core-js "^2.6.5"
     echarts "^4.2.1"
     element-ui "^2.4.5"

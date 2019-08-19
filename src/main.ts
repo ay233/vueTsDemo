@@ -21,7 +21,7 @@ Vue.prototype.uploadbaseUrl = env.VUE_APP_server;
 Vue.config.productionTip = false;
 // 引入组件并注册
 
-import ayColor from './packages/index.js'
+import ayColor from './packages/index'
 // import ayColor from 'ay-color'
 console.log(ayColor,'我是组件')
 Vue.use(ayColor)
