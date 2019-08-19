@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js + TS App"/>
+    <hea-component msg="Welcome to Your Vue.js + TS App"/>
     <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import heaComponent from './components/headCP.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    heaComponent
   }
 }
 </script>

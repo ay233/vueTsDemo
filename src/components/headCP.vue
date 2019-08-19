@@ -2,14 +2,13 @@
     <div class="hello">
         <router-link to="/"> 组件测试</router-link>
         <router-link to="/about">about</router-link>
-        <router-link to="/color">color</router-link>
     </div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 @Component
-export default class HelloWorld extends Vue {
+export default class headCP extends Vue {
     @Prop() private msg!: string
     @Prop() propC!: string
     msg1 :string= 'data数据'

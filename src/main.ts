@@ -20,7 +20,7 @@ Vue.prototype.uploadbaseUrl = env.VUE_APP_server;
 //开发不显示提示
 Vue.config.productionTip = false;
 // 引入组件并注册
-import colorsel from './index.js' 
+import colorsel from './index.js'; 
 console.log(colorsel);
 Vue.use(colorsel);
 new Vue({

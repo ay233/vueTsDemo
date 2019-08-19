@@ -39,12 +39,21 @@ module.exports = {
             })
     },
     configureWebpack: config => {
+        // 开发环境
         if (process.env.NODE_ENV === 'development') {
             config.devtool = 'source-map'
             // mutate config for production...
-        } else {
-
-        }
+        } else {}
+        // 发布npm 配置
+        // return {
+        //     entry: './src/index.js',
+        //     output: {
+        //         filename: 'js/ay-color.js',
+        //         library: 'ayColor',
+        //         libraryTarget: 'umd',
+        //         umdNamedDefine: true
+        //     }
+        // }
     },
     // vue-loader 配置项 https://vue-loader.vuejs.org/en/options.html
     //    vueLoader: {},  、、打开会报错
@@ -107,32 +116,4 @@ module.exports = {
             // 插件可以作为 `options.pluginOptions.foo` 访问这些选项。
         }
     }
-}
-
-
-
-
-
-// 发布npm 配置
-module.exports = {
-    chainWebpack: (config) => { //设置路径别名
-        config.resolve.alias
-            .set('@', resolve('src'))
-            .set('assets', resolve('src/assets'))
-            .set('components', resolve('src/components'))
-            .set('views', resolve('src/views'))
-            .set('vue$', 'vue/dist/vue.esm.js')
-    },
-    configureWebpack: config => {
-        //配置发布插件相关
-        return {
-            entry: './src/index.js',
-            output: {
-                filename: 'js/ay-color.js',
-                library: 'ayColor',
-                libraryTarget: 'umd',
-                umdNamedDefine: true
-            }
-        }
-    },
 }

@@ -16,9 +16,9 @@ interface Card {
 
 @Component
 export default class Home extends Vue {
-    colorArr :string[]= ['red', 'black', 'pink']
+    colorArr :string[]= ['red', 'black', 'pink','yellow','#191970','#00008B','#00FFFF','#556B2F','#FFDAB9','#BC8F8F','#C0C0C0']
     show :boolean = true
-    background :string= '';
+    background :string= 'red';
     selColor() {
         this.show = !this.show;
     }
@@ -31,5 +31,6 @@ export default class Home extends Vue {
 <style scoped lang="less">
 .showC {
     height: 400px;
+    border-radius: 2em 1em 4em / 0.5em 3em;
 }
 </style>

@@ -9,7 +9,7 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 @Component
-export default class HelloWorld extends Vue {
+export default class ayColor extends Vue {
     @Prop({ default: ()=>['red','yellow','pink','white','black','orange'] }) colorArr!:[]
     @Prop({default:false}) show!: boolean
     actcolor:string='';
@@ -30,7 +30,7 @@ export default class HelloWorld extends Vue {
             width: 30px;
             height: 30px;
             float: left;
-            margin-right: 10px;
+            margin: 10px 10px;
             border-radius: 5px;
             cursor: pointer;
             border: 1px solid gray;
