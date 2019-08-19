@@ -32,7 +32,7 @@ Vue.use(colorsel)
 
 ### 事件
 
-| name | Description   |
-| :--------:   | -----  |
-|    getColor    |  获取选中的颜色
+| name | Description   |  参数 |
+| :--------:   | -----  |  e |
+|    getColor    |  获取选中的颜色|object|
 
