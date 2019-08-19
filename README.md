@@ -26,8 +26,8 @@ Vue.use(colorsel)
 
 |    参数    |    作用   |   类型   | 默认值 |
 | -----------------  | ---------------- | :--------: | :----------: |
-| colorArr        | 定义的颜色数组
-| show       | 展示与隐藏
+| colorArr        | 定义的颜色数组 | array  | ['red','yellow','pink','white','black','orange']|
+| show       | 展示与隐藏 |bool|false|
 
 
 ### 事件
