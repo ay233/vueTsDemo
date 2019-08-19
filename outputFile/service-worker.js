@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.eb7979d450d73c7b3f3fee8bfb202b0b.js"
+  "precache-manifest.bb869aa49222a7e42c15956e0497b948.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "ay-color"});
